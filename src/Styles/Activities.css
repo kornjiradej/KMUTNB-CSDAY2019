@@ -1,0 +1,62 @@
+
+.Activities {
+    width: 100%;
+    color: greenyellow;
+    overflow: hidden;
+    
+}
+
+.time-table {
+    display: block;
+}
+
+.title-section {
+    margin-bottom: 24px;
+}
+
+.time-table-item{
+    display: flex;
+}   
+
+.time{
+    width: 50%;
+    text-align: right;
+    padding: 12px 60px 12px 60px;
+    
+}
+
+
+.activity{
+    position: relative;
+    width: 50%;
+    border-left:2px solid greenyellow;
+    text-align: left;
+    padding: 12px 60px 12px 60px;
+} 
+
+.activity:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid greenyellow;
+    border-radius: 50%;
+    background-color: #212529;
+    left: 0;
+    transform: translate(calc(-50% - 1px),2px);
+
+}
+
+.time-table-item:last-child > .activity , .time-table-item:last-child > .time{
+    padding-bottom: 12px;
+}  
+
+@media (max-width:768px){
+    .activity{
+        padding-left: 2em;;
+    }
+    .time{
+        padding-right: 2em;;
+        
+    }
+}

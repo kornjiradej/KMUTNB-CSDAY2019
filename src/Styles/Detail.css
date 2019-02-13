@@ -1,0 +1,26 @@
+.Detail{
+    width: 100%;
+    margin-top: 6vh;
+}
+.Detail * {
+    word-break: normal;
+}
+.Detail-textalign-left{
+    text-align: left !important;
+}
+.Detail h1{
+    font-weight: 600;
+}
+.Detail-mgtitem{
+    margin-top: 13vh;
+}
+.Detail-content{
+    font-size: 1.2rem;
+    line-height: 200%;
+    margin-top: 30px;
+    color: #d0d0d0;
+}
+.Detail-technology{
+    margin-left: 4vh;
+    margin-right: 4vh;
+}

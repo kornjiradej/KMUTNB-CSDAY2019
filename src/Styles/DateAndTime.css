@@ -1,0 +1,45 @@
+
+.DateAndTime {
+    display: flex;
+    width: 100%;
+    color: greenyellow;
+    overflow: hidden;
+    margin-top: 6vh;
+}
+
+.DateAndTime h1 {
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.DateAndTime h2 {
+    margin-bottom:1em;
+}
+
+.left-side{
+    width: 50%;
+    padding-top: 2em;
+    padding-right: 2em;
+    text-align: right;
+}
+
+.right-side{
+    width: 50%;
+    padding-top: 2em;
+    padding-left: 2em;
+    border-left: 4px solid greenyellow;
+    text-align: left;
+}
+
+@media (max-width: 768px){
+    .DateAndTime{
+        flex-direction: column;
+    }
+    .left-side,.right-side{
+        display: block;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        border:none;
+    }
+}
