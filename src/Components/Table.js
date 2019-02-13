@@ -16,8 +16,8 @@ export default class Table extends React.Component {
     const projects = this.changeData(data)
     window.addEventListener('resize', this.toMobile)
     let statusMobile = this.checkMobile()
-    this.setState({ 
-      projects, 
+    this.setState({
+      projects,
       projectsByType: projects,
       selectBtn: -1,
       isMobile: statusMobile
@@ -42,15 +42,16 @@ export default class Table extends React.Component {
   }
 
   changeData = (datas) => {
-    const arrType = ['Web Apllication', 'ML & Data analytics', 'System(ระบบเบื้องหลัง)', 'Blockchain', 'Mobile Application', 'Other']
+    //const arrType = ['Web Apllication', 'ML & Data analytics', 'System(ระบบเบื้องหลัง)', 'Blockchain', 'Mobile Application', 'Other']
+    const arrType = ['Blockchain', 'Game', 'Mobile Application', 'Network','Tracking', 'Web Application' , 'Other']
     let newData = []
     datas.map((data, index) => {
       if(data.name) {
-        const typeId = (arrType.indexOf(data.type) === -1) ? 5 : arrType.indexOf(data.type)
+        const typeId = (arrType.indexOf(data.type) === -1) ? 6 : arrType.indexOf(data.type)
         newData.push({
           id: index,
           typeId,
-          name: data.name, 
+          name: data.name,
           type: arrType.indexOf(typeId)
         })
       }
@@ -67,7 +68,7 @@ export default class Table extends React.Component {
     const { projects } = this.state
     if(type == -1) {
       this.onScrollTop()
-      this.setState({ 
+      this.setState({
         projectsByType: projects,
         selectBtn: -1
       })
@@ -77,7 +78,7 @@ export default class Table extends React.Component {
       console.log('--------------');
       const selected = projects.filter((project) => project.typeId == type)
       console.log(selected);
-      this.setState({ 
+      this.setState({
         projectsByType: selected,
         selectBtn: type
       })
@@ -94,23 +95,25 @@ export default class Table extends React.Component {
             { isMobile ?
               <select className="type-menu-mobile" onChange={(e) => this.onSelectType(e.target.value)} data-aos="fade-right">
                 <option value={-1}>All</option>
-                <option value={0}>Web Apllication</option>
-                <option value={1}>ML & Data analytics</option>
-                <option value={2}>System</option>
-                <option value={3}>Blockchain</option>
-                <option value={4}>Mobile Application</option>
-                <option value={5}>Other</option>
+                <option value={0}>Blockchain</option>
+                <option value={1}>Game</option>
+                <option value={2}>Mobile Application</option>
+                <option value={3}>Network</option>
+                <option value={4}>Tracking</option>
+                <option value={5}>Web Application</option>
+                  <option value={6}>Other</option>
               </select>
             :
               <div className="type-menu" data-aos="fade-right">
                 <h2 data-aos="fade-down">หมวดหมู่</h2>
                 <BtnType backgroudColor={selectBtn === -1}  onClick={() => this.onSelectType(-1)} >All</BtnType>
-                <BtnType backgroudColor={selectBtn === 0}  onClick={() => this.onSelectType(0)} >Web Apllication</BtnType>
-                <BtnType backgroudColor={selectBtn === 1}  onClick={() => this.onSelectType(1)} >ML & Data analytics</BtnType>
-                <BtnType backgroudColor={selectBtn === 2}  onClick={() => this.onSelectType(2)} >System</BtnType>
-                <BtnType backgroudColor={selectBtn === 3}  onClick={() => this.onSelectType(3)} >Blockchain</BtnType>
-                <BtnType backgroudColor={selectBtn === 4}  onClick={() => this.onSelectType(4)} >Mobile Application</BtnType>
-                <BtnType backgroudColor={selectBtn === 5} onClick={() => this.onSelectType(5)} >Other</BtnType>
+                <BtnType backgroudColor={selectBtn === 0}  onClick={() => this.onSelectType(0)} >Blockchain(2)</BtnType>
+                <BtnType backgroudColor={selectBtn === 1}  onClick={() => this.onSelectType(1)} >Game(3)</BtnType>
+                <BtnType backgroudColor={selectBtn === 2}  onClick={() => this.onSelectType(2)} >Mobile Application(7)</BtnType>
+                <BtnType backgroudColor={selectBtn === 3}  onClick={() => this.onSelectType(3)} >Network(3)</BtnType>
+                <BtnType backgroudColor={selectBtn === 4}  onClick={() => this.onSelectType(4)} >Tracking(6)</BtnType>
+                <BtnType backgroudColor={selectBtn === 5} onClick={() => this.onSelectType(5)} >Web Application(32)</BtnType>
+                  <BtnType backgroudColor={selectBtn === 6} onClick={() => this.onSelectType(6)} >Other(10)</BtnType>
               </div>
             }
           </div>

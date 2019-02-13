@@ -19,7 +19,7 @@ class Landing extends Component {
         <div className="Landing" data-aos="fade-up">
           <div className="Landing-head">
             <img src="/logo.png" alt="KMUTNB CSDAY 2018" width="180px" className="Landing-logo" />
-            <h1 className="Landing-title">KMUTNB CSDAY 2018</h1>
+            <h1 className="Landing-title">KMUTNB CSDAY 2019</h1>
             <h1 className="Landing-preparetext">เตรียมพบกับ!! งานประกวดเทคโนโลยีสุดยิ่งใหญ่</h1>
             <h2 className="inline">ของ<span className="Landing-csstudent">นักศึกษาภาควิชาคอมพิวเตอร์</span></h2>
             <h2 className="inline">&nbsp;มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</h2>
