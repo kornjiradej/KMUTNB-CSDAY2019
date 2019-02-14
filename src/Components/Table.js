@@ -106,7 +106,7 @@ export default class Table extends React.Component {
             :
               <div className="type-menu" data-aos="fade-right">
                 <h2 data-aos="fade-down">หมวดหมู่</h2>
-                <BtnType backgroudColor={selectBtn === -1}  onClick={() => this.onSelectType(-1)} >All</BtnType>
+                <BtnType backgroudColor={selectBtn === -1}  onClick={() => this.onSelectType(-1)} >All(63)</BtnType>
                 <BtnType backgroudColor={selectBtn === 0}  onClick={() => this.onSelectType(0)} >Blockchain(2)</BtnType>
                 <BtnType backgroudColor={selectBtn === 1}  onClick={() => this.onSelectType(1)} >Game(3)</BtnType>
                 <BtnType backgroudColor={selectBtn === 2}  onClick={() => this.onSelectType(2)} >Mobile Application(7)</BtnType>
