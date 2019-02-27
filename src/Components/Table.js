@@ -2,15 +2,37 @@ import React from 'react'
 import data from '../Utils/Projects.json'
 import styled from 'styled-components'
 import { Element } from 'react-scroll'
-import '../Styles/Table.css'
+import '../Styles/Table.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button,Modal } from 'react-bootstrap';
 
 export default class Table extends React.Component {
-  state = {
-    projects: [],
-    projectsByType: [],
-    selectBtn: -1,
-    isMobile: false
-  }
+  // state = {
+  //
+  // }
+    constructor(props, context) {
+        super(props, context);
+
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+
+        this.state = {
+            show: false,
+            projects: [],
+            projectsByType: [],
+            selectBtn: -1,
+            isMobile: false,
+        };
+    }
+
+    handleClose() {
+        this.setState({ show: false });
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
 
   componentDidMount() {
     const projects = this.changeData(data)
@@ -94,14 +116,14 @@ export default class Table extends React.Component {
           <div className="type-table">
             { isMobile ?
               <select className="type-menu-mobile" onChange={(e) => this.onSelectType(e.target.value)} data-aos="fade-right">
-                <option value={-1}>All</option>
-                <option value={0}>Blockchain</option>
-                <option value={1}>Game</option>
-                <option value={2}>Mobile Application</option>
-                <option value={3}>Network</option>
-                <option value={4}>Tracking</option>
-                <option value={5}>Web Application</option>
-                  <option value={6}>Other</option>
+                <option value={-1}>All(63)</option>
+                <option value={0}>Blockchain(2)</option>
+                <option value={1}>Game(3)</option>
+                <option value={2}>Mobile Application(7)</option>
+                <option value={3}>Network(3)</option>
+                <option value={4}>Tracking(6)</option>
+                <option value={5}>Web Application(32)</option>
+                  <option value={6}>Other(10)</option>
               </select>
             :
               <div className="type-menu" data-aos="fade-right">
@@ -126,9 +148,31 @@ export default class Table extends React.Component {
                 { projectsByType.map((project) => (
                     <div key={project.id} className="project-list">
                       <p className="mgt10">{project.name}</p>
+ 
+                         {/* <Button variant="primary" onClick={this.handleShow} style={{marginBottom: "10px"}} className="btn-primary-poster">
+                             View Poster
+                         </Button> */}
                     </div>
                   ))
                 }
+                  <div>
+                      <Modal show={this.state.show} onHide={this.handleClose} centered >
+                          <Modal.Header closeButton>
+                              <Modal.Title >Poster</Modal.Title>
+                          </Modal.Header>
+                          <Modal.Body style={{ textAlign: "center" }} >
+                              <img src="/poster/123.jpg" alt="Smiley face" width="100px" height="100px"  ></img>
+                          </Modal.Body>
+                          <Modal.Footer>
+                              <Button variant="secondary" onClick={this.handleClose}>
+                                  Close
+                              </Button>
+                              <Button variant="primary" onClick={this.handleClose}>
+                                  Save Changes
+                              </Button>
+                          </Modal.Footer>
+                      </Modal>
+                  </div>
               </div>
             </div>
           </div>

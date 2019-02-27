@@ -28,11 +28,11 @@
     transition: all 0.8s;
 }
 .nav-item {
-    margin-top: 12px; 
+    margin-top: 12px;
     cursor: pointer;
 }
 .nav-logo {
-    margin-top: 7px; 
+    margin-top: 7px;
 }
 .nav-logo img {
     margin-top: -25px;
