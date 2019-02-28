@@ -32,7 +32,7 @@ class Landing extends Component {
           <div className="Landing-calltoaction">
             <div onClick={ countRegisterClick }>
               <Button outline color="primary" size="lg" className="Landing-register"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSd1MoDN5sd6t0pDZRE85aePMoUm4aTjKObXAUP6EohqAqsKKw/viewform"
+                href="https://docs.google.com/forms/d/1WJiRtw0PMePpgx7T4TWlh4dsVHQRRJkdKBUFp19to9c/viewform?fbclid=IwAR17l_Ha_PhCJt5CWSBKe6nrNK43vUM7335e4qw8P9YrOXRt-fk-tMOlH0E&edit_requested=true"
                 target="_blank"
                 >
                 ลงทะเบียนเข้าร่วมงาน
