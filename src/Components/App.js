@@ -7,7 +7,7 @@ import Detail from './Detail.js'
 import Location from './Location.js'
 import Contact from './Contact.js'
 import Footer from './Footer.js'
-import Activities from './Activities';
+// import Activities from './Activities';
 import AOS from 'aos';
 import {Element} from 'react-scroll'
 import StarfieldCanvas from './StarfieldCanvas';
@@ -28,7 +28,7 @@ class App extends Component {
           <Landing/>
           <DateAndTime/>
           <Detail/>
-          <Activities />
+          {/* <Activities /> */}
           <Table/>
           <Location/>
           <Contact/>
