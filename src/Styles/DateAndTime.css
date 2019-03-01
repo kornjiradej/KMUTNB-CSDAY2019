@@ -36,49 +36,5 @@
 }
 
 @media (max-width: 768px){
-    .DateAndTimefont{
-        font-size: 16px;
-    }
-    .DateAndTime{
-        /* display: flex; */
-        /* flex-direction: column; */
-    }
-    .fontMobileDes-headDes{
-        font-size: 16px;
-    }
-    /* .left-side,.right-side{
-        display: block;
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        border:none;
-    } */
-    .fontMobileDate-DateHead{
-        font-size: 15px;
-    }
-    .left-side{
-        width: 100%;
-        padding-top: 1em;
-        padding-right: 1em;
-        text-align: right;
-    }
-    .right-side{
-        width: 100%;
-        padding-top: 1em;
-        padding-left: 1em;
-        border-left: 0.2px solid greenyellow;
-        text-align: left;
-    }
-    .fontMobileDate{
-        font-size: 15px !important;
-        /* visibility: hidden;
-        display: block;
-        border:none;
-        padding: 0;
-        text-align: center;
-        border:none; */
-    }
-    .fontMobileDes{
-        font-size: 15px !important;
-    }
+   
 }

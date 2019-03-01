@@ -1,0 +1,3 @@
+host www.cs.kmutnb.ac.th
+User stuuser
+Pass studentuser@cskmutnb
